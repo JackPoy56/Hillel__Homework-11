@@ -37,11 +37,7 @@ function getAvgMarksStudents(list) {
         marks = marks.concat(n.marks);
     });
 
-    let sum = 0;
-
-    for (let i = 0; i < marks.length; i++) {
-        sum = sum + marks[i];
-    }
+    let sum = marks.reduce((previousValue, currentValue) => previousValue + currentValue);
 
     return sum / marks.length;
 }
